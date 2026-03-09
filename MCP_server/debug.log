@@ -1,0 +1,13 @@
+2026-03-10 02:48:23,413 [DEBUG] Registering handler for CallToolRequest
+2026-03-10 02:48:23,413 [DEBUG] Using proactor: IocpProactor
+2026-03-10 02:48:23,427 [DEBUG] Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2026-03-10 02:48:23,428 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000023BD398F950>
+2026-03-10 02:48:23,429 [INFO] Processing request of type ListToolsRequest
+2026-03-10 02:48:23,429 [DEBUG] Dispatching request of type ListToolsRequest
+2026-03-10 02:48:23,429 [DEBUG] Response sent
+2026-03-10 02:48:45,118 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000023BD3687E90>
+2026-03-10 02:48:45,118 [INFO] Processing request of type CallToolRequest
+2026-03-10 02:48:45,118 [DEBUG] Dispatching request of type CallToolRequest
+2026-03-10 02:48:45,120 [INFO] Tool called: 'book_appointment'
+2026-03-10 02:48:45,120 [DEBUG] Arguments received: {'reason': 'headache', 'name': 'amzad', 'date': '2024-03-26'}
+2026-03-10 02:48:50,275 [DEBUG] Response sent
