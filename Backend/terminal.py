@@ -79,7 +79,7 @@ Use these tools whenever needed to give accurate, up-to-date information.
                     contents=messages
                 )
 
-                parts=response.candidates[0].content.parts
+                parts=response.candidates[0].content.parts or []
 
                 while any(part.function_call for part in parts):
                     messages.append(response.candidates[0].content)
@@ -91,19 +91,21 @@ Use these tools whenever needed to give accurate, up-to-date information.
                                 dict(part.function_call.args)
                                 )
                             raw=tool_result.content[0].text 
+                            parsed_result=json.loads(raw)
+                            print("\nDEBUG: ",parsed_result,"\nRaw :", raw, "\nTool Result:",tool_result)
                             function_responses.append(
                                 types.Part(
                                     function_response=types.FunctionResponse(
                                         id=part.function_call.id,
                                         name=part.function_call.name,
-                                        response={"result":json.loads(raw)}
+                                        response={"result":parsed_result}
                                     )
                                 )
                             )
 
                     messages.append(types.Content(
-                        role="tool",
-                        parts=function_responses
+                        role="user",
+                        parts=function_responses+[types.Part(text="Please summarize the result for the user in a friendly way.")]
                     ))
                     # await asyncio.sleep()
                     response=await client.aio.models.generate_content(
@@ -111,10 +113,21 @@ Use these tools whenever needed to give accurate, up-to-date information.
                     config=config,
                     contents=messages
                     )
-
+                    # print("\nRESONPONSE: ",response)
+                    parts=response.candidates[0].content.parts or []
+                
+                if not parts or not any(part.text for part in parts):
+                    print("\nNo Parts in Gemini Response")
+                    messages.append(types.Content(role="user",parts=[types.Part(text="Please summarize the result for the user in a friendly way.")]))
+                    response=await client.aio.models.generate_content(
+                    model="gemini-2.5-flash-lite",
+                    config=config,
+                    contents=messages
+                    )
                     parts=response.candidates[0].content.parts
-
-                messages.append(response.candidates[0].content)
+                
+                if response.candidates and response.candidates[0].content:
+                    messages.append(response.candidates[0].content)
                 for part in parts:
                     if part.text:
                         print(f"\nAssistant: {part.text}")

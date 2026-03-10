@@ -1,13 +1,34 @@
-2026-03-10 02:48:23,413 [DEBUG] Registering handler for CallToolRequest
-2026-03-10 02:48:23,413 [DEBUG] Using proactor: IocpProactor
-2026-03-10 02:48:23,427 [DEBUG] Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
-2026-03-10 02:48:23,428 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000023BD398F950>
-2026-03-10 02:48:23,429 [INFO] Processing request of type ListToolsRequest
-2026-03-10 02:48:23,429 [DEBUG] Dispatching request of type ListToolsRequest
-2026-03-10 02:48:23,429 [DEBUG] Response sent
-2026-03-10 02:48:45,118 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000023BD3687E90>
-2026-03-10 02:48:45,118 [INFO] Processing request of type CallToolRequest
-2026-03-10 02:48:45,118 [DEBUG] Dispatching request of type CallToolRequest
-2026-03-10 02:48:45,120 [INFO] Tool called: 'book_appointment'
-2026-03-10 02:48:45,120 [DEBUG] Arguments received: {'reason': 'headache', 'name': 'amzad', 'date': '2024-03-26'}
-2026-03-10 02:48:50,275 [DEBUG] Response sent
+2026-03-11 00:03:41,291 [DEBUG] Registering handler for CallToolRequest
+2026-03-11 00:03:41,292 [DEBUG] Using proactor: IocpProactor
+2026-03-11 00:03:41,306 [DEBUG] Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2026-03-11 00:03:41,307 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000021619748810>
+2026-03-11 00:03:41,307 [INFO] Processing request of type ListToolsRequest
+2026-03-11 00:03:41,307 [DEBUG] Dispatching request of type ListToolsRequest
+2026-03-11 00:03:41,308 [DEBUG] Response sent
+2026-03-11 00:10:02,731 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x00000216177B1790>
+2026-03-11 00:10:02,731 [INFO] Processing request of type CallToolRequest
+2026-03-11 00:10:02,733 [DEBUG] Dispatching request of type CallToolRequest
+2026-03-11 00:10:02,736 [INFO] Tool called: 'update_appointment'
+2026-03-11 00:10:02,736 [DEBUG] Arguments received: {'name': 'amzad', 'date': '2026-03-29', 'newName': 'sam'}
+2026-03-11 00:10:06,538 [ERROR] Unexpected error in 'update_appointment': 'Appointment' object has no attribute 'appointment_id'
+Traceback (most recent call last):
+  File "C:\Users\AMZAD ALI\Desktop\customer_support_Agent\MCP_server\server.py", line 141, in router
+    result = await update_appointment(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\AMZAD ALI\Desktop\customer_support_Agent\MCP_server\Tools\update_appointment.py", line 40, in update_appointment
+    "appointment_id": apt.appointment_id,
+                      ^^^^^^^^^^^^^^^^^^
+AttributeError: 'Appointment' object has no attribute 'appointment_id'
+2026-03-11 00:10:06,700 [DEBUG] Response sent
+2026-03-11 00:10:06,703 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000021617855190>
+2026-03-11 00:10:06,703 [INFO] Processing request of type CallToolRequest
+2026-03-11 00:10:06,704 [DEBUG] Dispatching request of type CallToolRequest
+2026-03-11 00:10:06,705 [INFO] Tool called: 'book_appointment'
+2026-03-11 00:10:06,706 [DEBUG] Arguments received: {'date': '2026-04-01', 'reason': 'hairfall', 'name': 'fara'}
+2026-03-11 00:10:07,714 [DEBUG] Response sent
+2026-03-11 00:10:07,716 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x00000216198F1D90>
+2026-03-11 00:10:07,716 [INFO] Processing request of type CallToolRequest
+2026-03-11 00:10:07,716 [DEBUG] Dispatching request of type CallToolRequest
+2026-03-11 00:10:07,718 [INFO] Tool called: 'delete_appointment'
+2026-03-11 00:10:07,718 [DEBUG] Arguments received: {'name': 'amzad', 'date': '2026-03-28'}
+2026-03-11 00:10:08,543 [DEBUG] Response sent

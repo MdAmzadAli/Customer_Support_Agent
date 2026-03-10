@@ -37,7 +37,7 @@ async def update_appointment(session:AsyncSession, name:str, date:str, newName:s
     
     await session.flush()
     return response_schema(True, "Appointment Updated successfully",{
-        "appointment_id": apt.appointment_id,
+        "appointment_id": str(apt.id),
         "name":           apt.name,
         "date":           apt.date.isoformat(),   
         "reason":         apt.reason,
