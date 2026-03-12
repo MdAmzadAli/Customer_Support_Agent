@@ -7,6 +7,6 @@ class UserInfo(Base):
     __table_args__={"schema":"user_data"}
     id=Column(String, primary_key=True, index=True,default=lambda:str(uuid4()))
     name=Column(String)
-    email=Column(String,unique=True, nullable=False)
+    email=Column(String,unique=True)
     password=Column(String)
 
