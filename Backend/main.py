@@ -9,7 +9,8 @@ from google.genai import types
 import os
 from dotenv import load_dotenv, find_dotenv
 from .utils import gb
-from .Controller import query
+from .Controller import query,user
+# from Database.db_init import sessionLocal
 
 load_dotenv(find_dotenv())
 
@@ -82,3 +83,4 @@ app.add_middleware(
 )
 
 app.include_router(query.router, prefix="/query", tags=["Query"])
+app.include_router(user.router, prefix="/user", tags=["User"])

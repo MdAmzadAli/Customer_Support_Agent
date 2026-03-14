@@ -12,5 +12,5 @@ class Chats(Base):
     bot_response=Column(String, nullable=False)
     created_at=Column(DateTime(timezone=True), nullable=False, server_default=func.now())
 
-    user_id=Column(String, ForeignKey('user_data.user_info.id'), nullable=False)
+    user_id=Column(String, ForeignKey('user_data.user_info.id', ondelete="CASCADE"), nullable=False)
     

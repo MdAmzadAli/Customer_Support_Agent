@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
 from .base import Base
 from uuid import uuid4
 
@@ -9,4 +10,5 @@ class UserInfo(Base):
     name=Column(String)
     email=Column(String,unique=True)
     password=Column(String)
+    chats=relationship("Chats",cascade="all, delete-orphan")
 

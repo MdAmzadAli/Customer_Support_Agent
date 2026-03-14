@@ -5,6 +5,8 @@ from ..utils import gb
 import json
 from ..utils.try_catch_wrapper import catch_errors
 from ..utils.jwt_auth import verify_access_token
+from Database.schema import Chats
+from Database.db_init import sessionLocal
 
 router = APIRouter()
 
@@ -97,4 +99,12 @@ async def query_path(request: ChatRequest, user_id: str = Depends(verify_access_
     messages = conversation_history.get(user_id, [])
     reply = await process_query(query, messages)
     conversation_history[user_id] = messages[-MAX_HISTORY:]  
+    async with sessionLocal.begin() as session:
+        new_chat=Chats(
+            user_message=query,
+            bot_response=reply,
+            user_id=user_id
+        )
+        session.add(new_chat)
+
     return ChatResponse(response=reply)

@@ -1,37 +1,7 @@
-2026-03-12 01:46:47,711 [DEBUG] Registering handler for CallToolRequest
-2026-03-12 01:46:47,711 [DEBUG] Using proactor: IocpProactor
-2026-03-12 01:46:47,725 [DEBUG] Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
-2026-03-12 01:46:47,726 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000022C3F3CB110>
-2026-03-12 01:46:47,727 [INFO] Processing request of type ListToolsRequest
-2026-03-12 01:46:47,727 [DEBUG] Dispatching request of type ListToolsRequest
-2026-03-12 01:46:47,727 [DEBUG] Response sent
-2026-03-12 01:48:56,010 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000022C3F3CBAD0>
-2026-03-12 01:48:56,011 [INFO] Processing request of type CallToolRequest
-2026-03-12 01:48:56,011 [DEBUG] Dispatching request of type CallToolRequest
-2026-03-12 01:48:56,013 [INFO] Tool called: 'book_appointment'
-2026-03-12 01:48:56,013 [DEBUG] Arguments received: {'name': 'rahul', 'reason': 'gas', 'date': '2026-03-18'}
-2026-03-12 01:48:59,932 [DEBUG] Response sent
-2026-03-12 01:54:12,303 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000022C3F05FCD0>
-2026-03-12 01:54:12,304 [INFO] Processing request of type CallToolRequest
-2026-03-12 01:54:12,304 [DEBUG] Dispatching request of type CallToolRequest
-2026-03-12 01:54:12,305 [INFO] Tool called: 'check_availability'
-2026-03-12 01:54:12,305 [DEBUG] Arguments received: {'date': '2026-03-14'}
-2026-03-12 01:54:12,815 [DEBUG] Response sent
-2026-03-12 01:54:13,903 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000022C3F05F0D0>
-2026-03-12 01:54:13,903 [INFO] Processing request of type CallToolRequest
-2026-03-12 01:54:13,903 [DEBUG] Dispatching request of type CallToolRequest
-2026-03-12 01:54:13,905 [INFO] Tool called: 'book_appointment'
-2026-03-12 01:54:13,905 [DEBUG] Arguments received: {'date': '2026-03-14', 'reason': 'acne on face and it itches', 'name': 'tanmay'}
-2026-03-12 01:54:14,580 [DEBUG] Response sent
-2026-03-12 01:57:19,564 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000022C3F2EFED0>
-2026-03-12 01:57:19,564 [INFO] Processing request of type CallToolRequest
-2026-03-12 01:57:19,566 [DEBUG] Dispatching request of type CallToolRequest
-2026-03-12 01:57:19,566 [INFO] Tool called: 'delete_appointment'
-2026-03-12 01:57:19,566 [DEBUG] Arguments received: {'name': 'tanmay', 'date': '2026-03-14'}
-2026-03-12 01:57:20,633 [DEBUG] Response sent
-2026-03-12 01:57:21,300 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x0000022C3F4DFE90>
-2026-03-12 01:57:21,301 [INFO] Processing request of type CallToolRequest
-2026-03-12 01:57:21,301 [DEBUG] Dispatching request of type CallToolRequest
-2026-03-12 01:57:21,303 [INFO] Tool called: 'update_appointment'
-2026-03-12 01:57:21,303 [DEBUG] Arguments received: {'newReason': 'nightfall', 'date': '2026-03-18', 'name': 'rahul'}
-2026-03-12 01:57:22,153 [DEBUG] Response sent
+2026-03-14 21:30:06,980 [DEBUG] Registering handler for CallToolRequest
+2026-03-14 21:30:06,980 [DEBUG] Using proactor: IocpProactor
+2026-03-14 21:30:06,997 [DEBUG] Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2026-03-14 21:30:06,998 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x000001FD98F30A90>
+2026-03-14 21:30:06,998 [INFO] Processing request of type ListToolsRequest
+2026-03-14 21:30:06,998 [DEBUG] Dispatching request of type ListToolsRequest
+2026-03-14 21:30:06,998 [DEBUG] Response sent
