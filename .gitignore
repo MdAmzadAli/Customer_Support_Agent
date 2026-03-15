@@ -2,3 +2,5 @@
 cvenv/
 __pycache__/
 *.pyc
+
+Frontend/node_modules/

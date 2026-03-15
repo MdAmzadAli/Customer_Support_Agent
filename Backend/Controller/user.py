@@ -15,7 +15,7 @@ router = APIRouter()
 #     created_at: str
 
 class ChatResponse(BaseModel):
-    chats: List[Any]
+    response: List[Any] 
 
 
 @router.get("/data")
@@ -35,7 +35,7 @@ async def get_data(user_id: str = Depends(verify_access_token)):
     }
     for row in rows
 ]
-    return ChatResponse(chats=chat_items)
+    return ChatResponse(response=chat_items)
 
 @router.get("/create")
 @catch_errors

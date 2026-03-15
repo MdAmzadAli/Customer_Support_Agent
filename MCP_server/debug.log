@@ -1,7 +1,13 @@
-2026-03-14 21:30:06,980 [DEBUG] Registering handler for CallToolRequest
-2026-03-14 21:30:06,980 [DEBUG] Using proactor: IocpProactor
-2026-03-14 21:30:06,997 [DEBUG] Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
-2026-03-14 21:30:06,998 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x000001FD98F30A90>
-2026-03-14 21:30:06,998 [INFO] Processing request of type ListToolsRequest
-2026-03-14 21:30:06,998 [DEBUG] Dispatching request of type ListToolsRequest
-2026-03-14 21:30:06,998 [DEBUG] Response sent
+2026-03-16 00:11:04,387 [DEBUG] Registering handler for CallToolRequest
+2026-03-16 00:11:04,387 [DEBUG] Using proactor: IocpProactor
+2026-03-16 00:11:04,402 [DEBUG] Received message: root=InitializedNotification(method='notifications/initialized', params=None, jsonrpc='2.0')
+2026-03-16 00:11:04,403 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x000001D5495B9050>
+2026-03-16 00:11:04,403 [INFO] Processing request of type ListToolsRequest
+2026-03-16 00:11:04,403 [DEBUG] Dispatching request of type ListToolsRequest
+2026-03-16 00:11:04,403 [DEBUG] Response sent
+2026-03-16 00:15:14,892 [DEBUG] Received message: <mcp.shared.session.RequestResponder object at 0x000001D549677BD0>
+2026-03-16 00:15:14,894 [INFO] Processing request of type CallToolRequest
+2026-03-16 00:15:14,894 [DEBUG] Dispatching request of type CallToolRequest
+2026-03-16 00:15:14,896 [INFO] Tool called: 'book_appointment'
+2026-03-16 00:15:14,896 [DEBUG] Arguments received: {'reason': 'kidney issue', 'name': 'star', 'date': '2026-03-20'}
+2026-03-16 00:15:19,230 [DEBUG] Response sent
